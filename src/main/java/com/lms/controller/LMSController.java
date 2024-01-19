@@ -1,7 +1,6 @@
 package com.lms.controller;
 
 import java.util.ArrayList;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -28,19 +27,19 @@ public class LMSController {
 	LaptopDAO dao;
 	
 	@PostMapping("/PerformInsert")
-	public String PerformInsert(@RequestBody Laptop lms) {
+	public String performInsert(@RequestBody Laptop lms) {
 		dao.save(lms);
 		return "Inserted";
 	}
 	
 	@PutMapping("/PerformUpdate")
-	public String PerformUpdate(@RequestBody Laptop lms) {
+	public String performUpdate(@RequestBody Laptop lms) {
 		dao.save(lms);
 		return "Updated";
 	}
 	
 	@DeleteMapping("/PerformDelete/{laptopId}")
-	public String PerformDelete(@PathVariable ("laptopId") int laptopId) {
+	public String performDelete(@PathVariable ("laptopId") int laptopId) {
 		dao.deleteById(laptopId);
 		return "Deleted";
 	}
